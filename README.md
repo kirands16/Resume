@@ -1,13 +1,189 @@
-# 
-My research area of interest is Artificial Intelligence (AI). Within AI, I am interested in problems related to probabilistic forecast, machine learning and HPC, and their interdisciplinary applications to earth  science. I have found the applications in earth sciences to be exciting not only because of their practical value, but also as an inspiration for new types of problems that prompt the development of new theories and algorithms that have not been investigated before. My research work blends both theoretical and practical aspects of problems .In the following, I first briefly summarize research work I conducted till year 2020. This work also includes my early career years as a Scientific officer at  Institute of Tropical Meteorology, Pune and then pursuing Integrated-M.Tech-PhD in Computer science and IT student at Department of Technology, Pune University . 
-A. Current research Work : My research work during this period focused mostly on following areas: (1) climate model potential predictability of  ISMR and (2) machine learning & HPC Both of these areas were strongly influenced by earth sciences and engineering problems. This line of my research work focused on the development of climate science model: in this Machine learning Motivated by the emergence of large datasets in various areas of science, technology, business, and everyday life in the past decade, my second area of research work focused on machine learning that aim to improve the understanding of patterns in the data and processes that generate them, and utilize them in solving nontrivial and challenging problems such as prediction of Indian monsoon, and extreme event detection. My work spanned both the development of new machine learning algorithms, as well as, their interdisciplinary applications to earth sciences and engineering fields. Examples of my work in earth sciences include: (1)  ISMR prediction using Analysis of variance (ANOVA) techniques in which I used the Signal to Noise Ratio,Mutual Information,entropy, RLimit for prediction, I used 5 month initial conditions for model simulations and found the February initial condition predict good correlation among the all different initial conditions. (M.Tech. Thesis and AGU JAMES paper 2017)(2) The development of the deep learning model using CNN for prediction of the Elnino, which is a climate phenomenon that occurs when a vast pool of water in the eastern tropical Pacific Ocean becomes abnormally warm, which affect the extreme events in the world, for Indian perspective, causes drought .
-To Do Next projects:
-# 
-Implementing the ACE2 (AI2 Climate Emulator version 2) for Indian Summer Monsoon Rainfall (ISMR) prediction involves creating a machine learning-based atmospheric emulator tailored to India's monsoon patterns. The ACE2 model, as described in the literature, is a 450M-parameter autoregressive emulator with 6-hour temporal resolution, 1° horizontal resolution, and eight vertical layers, designed to simulate atmospheric variability and conserve global dry air mass and moisture. It excels at capturing phenomena like tropical cyclones and the Madden-Julian Oscillation (MJO), which are critical for monsoon prediction. Below, I provide a comprehensive implementation plan, including code, leveraging the ACE2 framework for ISMR prediction, using Python with PyTorch, and incorporating ERA5 reanalysis data for training, as suggested by the source material. Since the full ACE2 codebase is complex and proprietary components may not be fully open-source, this implementation outlines a simplified version inspired by the ACE2 architecture, focusing on ISMR prediction.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kiran D. Salunke - Climate Model Developer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100 font-sans">
+  <!-- Navigation -->
+  <nav class="bg-blue-900 text-white p-4 sticky top-0 z-10">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-xl font-bold">Kiran D. Salunke</h1>
+      <div class="md:hidden">
+        <button id="menu-toggle" class="focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+      <ul id="nav-menu" class="hidden md:flex space-x-4">
+        <li><a href="#about" class="hover:text-blue-300">About</a></li>
+        <li><a href="#education" class="hover:text-blue-300">Education</a></li>
+        <li><a href="#experience" class="hover:text-blue-300">Experience</a></li>
+        <li><a href="#projects" class="hover:text-blue-300">Projects</a></li>
+        <li><a href="#skills" class="hover:text-blue-300">Skills</a></li>
+        <li><a href="#achievements" class="hover:text-blue-300">Achievements</a></li>
+        <li><a href="#workshops" class="hover:text-blue-300">Workshops</a></li>
+        <li><a href="#publications" class="hover:text-blue-300">Publications</a></li>
+      </ul>
+    </div>
+  </nav>
 
-## CorrDiff (Correction Diffusion) is a deep learning model developed to predict and correct the errors made by numerical weather models (e.g., NIM) during forecasting.
-It learns to forecast the model error fields (differences between model outputs and observations/reanalysis) and applies corrections during runtime to improve forecasts without replacing the physics-based dynamics.
-Key Idea:
-Instead of predicting the weather directly (as in FourCastNet), CorrDiff predicts the error of the physics model and adds it back at each simulation step.
-Reference:
-Weyn, J.A., Subramanian, A., Kurth, T. et al. "CorrDiff: Correcting Physical Models with Diffusion Models for Long-Term Stable Forecasting." JAMES (2023). DOI:10.1029/2023MS003025
+  <!-- Main Content -->
+  <div class="container mx-auto p-6 max-w-4xl bg-white shadow-lg rounded-lg mt-6">
+    <!-- Header -->
+    <header class="text-center mb-8">
+      <h1 class="text-4xl font-bold text-gray-800">Kiran D. Salunke</h1>
+      <p class="text-xl text-gray-600">Junior Scientific Officer, Indian Institute of Tropical Meteorology</p>
+      <p class="text-gray-600">
+        <a href="mailto:kirands16@gmail.com" class="text-blue-600">kirands16@gmail.com</a> |
+        <a href="mailto:kiran@tropmet.res.in" class="text-blue-600">kiran@tropmet.res.in</a> |
+        <a href="https://github.com/kirands16" class="text-blue-600">GitHub</a> |
+        <a href="https://linkedin.com/in/kirands16" class="text-blue-600">LinkedIn</a> |
+        +91-9850371196
+      </p>
+    </header>
+
+    <!-- About -->
+    <section id="about" class="mb-8">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-4">About</h2>
+      <p class="text-gray-700">
+        I am a Ph.D. researcher at the Indian Institute of Tropical Meteorology, specializing in deep learning frameworks for ENSO and Indian Summer Monsoon Rainfall (ISMR) prediction. With over a decade of experience as a Junior Scientific Officer, I leverage advanced computational techniques, including CNNs and transfer learning, to enhance climate modeling and seasonal forecasting using tools like CFSv2, Python, and TensorFlow.
+      </p>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="mb-8">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Education</h2>
+      <div class="mb-4">
+        <h3 class="text-lg font-medium">Int. MTech-Ph.D., Computer and Information Technology</h3>
+        <p class="text-gray-600">Savitribai Phule Pune University, 2020–Present, CGPA: 7.13/10</p>
+        <p class="text-gray-700">Ph.D. Topic: Deep Learning Based Framework for ENSO and ISMR Prediction</p>
+      </div>
+      <div class="mb-4">
+        <h3 class="text-lg font-medium">MTech, Modeling and Simulations</h3>
+        <p class="text-gray-600">Savitribai Phule Pune University, 2015–2017, CGPA: 2.24/6</p>
+      </div>
+      <div class="mb-4">
+        <h3 class="text-lg font-medium">MSc, Computer Science</h3>
+        <p class="text-gray-600">North Maharashtra University, 2007–2009, Percentage: 52.08</p>
+      </div>
+      <div class="mb-4">
+        <h3 class="text-lg font-medium">HSC</h3>
+        <p class="text-gray-600">Jaihind College Dhule, Maharashtra State Board, 2000, Percentage: 55.83</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-medium">SSC</h3>
+        <p class="text-gray-600">Pandit Nehru School, Maharashtra State Board, 1998, Percentage: 74.40</p>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="mb-8">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Experience</h2>
+      <div class="mb-4">
+        <h3 class="text-lg font-medium">Junior Scientific Officer, Indian Institute of Tropical Meteorology</h3>
+        <p class="text-gray-600">Pune, 2009–Present</p>
+        <ul class="list-disc list-inside text-gray-700">
+          <li>Developed dynamical systems for ISMR prediction under the Monsoon Mission Project using CFSv2, improving seasonal forecast accuracy.</li>
+          <li>Investigated potential predictability of ISMR, analyzing soil moisture and SST impacts via ANOVA, relative entropy, and mutual information.</li>
+          <li>Designed CNN-based deep learning models for ENSO prediction, achieving high correlation skill for Niño 3.4 index.</li>
+          <li>Applied transfer learning for ISMR prediction, leveraging pre-trained models to capture non-linear monsoon dynamics.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="mb-8">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Projects</h2>
+      <div class="mb-4">
+        <h3 class="text-lg font-medium">
+          <a href="monsoon-mission.html" class="text-blue-600">Monsoon Mission Project: ISMR Prediction with CFSv2</a>
+        </h3>
+        <p class="text-gray-700">
+          Developed a dynamical system for seasonal ISMR prediction using the CFSv2 model, focusing on SST and soil moisture impacts.
+        </p>
+        <img src="ismr-forecast.png" alt="ISMR forecast plot" class="mt-2 w-full max-w-md">
+      </div>
+      <div class="mb-4">
+        <h3 class="text-lg font-medium">
+          <a href="deep-learning-enso.html" class="text-blue-600">Deep Learning for ENSO Prediction</a>
+        </h3>
+        <p class="text-gray-700">
+          Built a CNN-based model to predict ENSO, utilizing CMIP5 and NOAA datasets for improved Niño 3.4 index forecasting.
+        </p>
+      </div>
+      <div>
+        <h3 class="text-lg font-medium">
+          <a href="deep-learning-ismr.html" class="text-blue-600">Deep Learning for ISMR Prediction</a>
+        </h3>
+        <p class="text-gray-700">
+          Applied transfer learning to enhance ISMR prediction, capturing complex monsoon dynamics with pre-trained neural networks.
+        </p>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="mb-8">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Technical Skills</h2>
+      <ul class="list-disc list-inside text-gray-700">
+        <li>Languages: Fortran 90, Python, C, Matlab, R</li>
+        <li>Developer Tools: Keras, TensorFlow, PyTorch, Xconv, NCO, CDO</li>
+        <li>Areas of Interest: Artificial Intelligence, Machine Learning, Climate Modeling (CFS, PWP, MOM4, MOM5), HPC, Data Assimilation</li>
+      </ul>
+    </section>
+
+    <!-- Achievements -->
+    <section id="achievements" class="mb-8">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Achievements</h2>
+      <ul class="list-disc list-inside text-gray-700">
+        <li>Indian Meteorological Society Young Scientist Award, Sep 2014</li>
+        <li>Twenty Fifth Annual Silver Jubilee Award, IITM, Nov 2013</li>
+        <li>Excellent Performance Award, Group B Officer, Nov 2013</li>
+        <li>Certificate of Excellence Award, Scientific Officer Category, Nov 2022</li>
+      </ul>
+    </section>
+
+    <!-- Workshops -->
+    <section id="workshops" class="mb-8">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Workshops & Training</h2>
+      <ul class="list-disc list-inside text-gray-700">
+        <li>National Training on AI/ML and Data Assimilation, IITM Pune, Feb 2023</li>
+        <li>TAIAES Summer School on Trustworthy AI for Environmental Science, Jul 2022</li>
+        <li>WCRP Virtual Summer School on Climate Variability, Jun 2022</li>
+        <li>Summer School on Big Data Analytics for Ocean and Climate, Jul 2022</li>
+        <li>AI/ML Workshop, Ministry of Earth Sciences, May 2022</li>
+        <li>Kavli Program in Machine Learning and Climate, Nov–Dec 2021</li>
+        <li>NOAA Workshop on Leveraging AI in Environmental Sciences, Sep 2021</li>
+        <li>TAIAES Summer School, Jul 2021</li>
+        <li>Google Research India Graduate Symposium, Apr 2021</li>
+        <li>AI/ML for Atmosphere-Ocean Applications, Feb 2021</li>
+        <li>RIKEN Data Assimilation School, Japan, Jan 2018</li>
+        <li>ICACC 2017, Kochi, Aug 2017</li>
+        <li>ESCAPE YSSS on Weather Prediction, Copenhagen, Aug 2017</li>
+        <li>HPC Advanced Training, IITM Pune, Jul 2015</li>
+        <li>ICTP Developer School, Trieste, Italy, Oct–Nov 2014</li>
+        <li>APCC Training Program, Busan, South Korea, Nov 2012</li>
+      </ul>
+    </section>
+
+    <!-- Publications -->
+    <section id="publications" class="mb-8">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Publications</h2>
+      <ul class="list-disc list-inside text-gray-700">
+        <li>Hari K.B.R.R., et al. (2020). Impact of horizontal resolution on SST bias. <a href="https://doi.org/10.1002/joc.6496" class="text-blue-600">DOI</a></li>
+        <li>Pillai P.A., et al. (2018). Potential predictability in CFSv2-T382. <a href="https://doi.org/10.1007/s00382-017-3936-y" class="text-blue-600">DOI</a></li>
+        <li>Pillai P.A., et al. (2017). Two flavors of El Niño in CFSv2. <a href="https://doi.org/10.1007/s00382-016-3305-2" class="text-blue-600">DOI</a></li>
+        <li>Chattopadhyay R., et al. (2016). Large-scale teleconnection patterns. <a href="https://doi.org/10.1002/joc.4556" class="text-blue-600">DOI</a></li>
+        <li>Pokhrel S., et al. (2016). Seasonal prediction in NCEP CFSv2. <a href="https://doi.org/10.1007/s00382-015-2703-1" class="text-blue-600">DOI</a></li>
+        <li>Ramu D.A., et al. (2016). ISMR simulation in CFSv2. <a href="https://doi.org/10.1002/2015JD024629" class="text-blue-600">DOI</a></li>
+        <li>Saha S., et al. (2016). Potential Predictability in NCEP CFSv2. <a href="https://doi.org/10.1002/2015MS000542" class="text-blue-600">DOI</a></li>
+        <li>Chattopadhyay R., et al. (2015). Extratropical SST influence. <a href="https://doi.org/10.1002/qj.2562" class="text-blue-600">DOI</a></li>
+        <li>Saberali C.T., et al. (2015). Ensemble mean projection. <a href="https://doi.org/10.1007/s00382-014-2269-3" class="text-blue-600">DOI</a></li>
+        <li>Saha Subodh K., et al. (2014). Improved simulation in NCEP CFS. <a href="https://doi.org/10.1002/joc.3791" class="text-blue-600">DOI</a></li>
+        <li>Chaudhari H.S., et al. (2013). Model biases in NCEP CFS. <a href="https://doi.org/10.1002/joc.3489" class="text-blue-600">DOI</a></li>
+        <li>Hazra A., et al. (2013). ISMR drought 2009. <a href="https://doi.org/10.1002/asl2.437" class="text-blue-600">DOI</a></li>
+        <li>Saberali C.T., et al. (2013). Boreal summer intraseasonal oscillations. <a href="https://doi.org/10.1002/jgrd.50403
